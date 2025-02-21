@@ -1,0 +1,8 @@
+com/paulomlr/carteira_digital/core/domain/WalletTest.class
+com/paulomlr/carteira_digital/application/usecaseimpl/AddBalanceUseCaseImplTest.class
+com/paulomlr/carteira_digital/CarteiraDigitalApplicationTests.class
+com/paulomlr/carteira_digital/core/domain/UserTest.class
+com/paulomlr/carteira_digital/application/usecaseimpl/CreateUserUseCaseImplTest.class
+com/paulomlr/carteira_digital/application/usecaseimpl/ExecuteTransferUseCaseImplTest.class
+com/paulomlr/carteira_digital/application/usecaseimpl/CreateTransferUseCaseImplTest.class
+com/paulomlr/carteira_digital/application/usecaseimpl/CheckBalanceUseCaseImplTest.class

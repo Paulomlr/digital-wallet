@@ -1,0 +1,238 @@
+{
+	"info": {
+		"_postman_id": "a94a34e5-e44d-4fbb-9db3-6c5ca0a94063",
+		"name": "Carteira Digital API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37560914"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Account Management",
+					"item": [
+						{
+							"name": "Create User",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"name\": \"Ricardo Mendes Costa\",\n        \"email\": \"ricardo.costa@gmail.com\",\n        \"password\": \"Ricardo123@\"\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/users",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Authentication",
+					"item": [
+						{
+							"name": "Login",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const jsonResponse = pm.response.json();",
+											"pm.environment.set(\"accessToken\", jsonResponse.token);",
+											"",
+											"pm.environment.set(\"userId\", jsonResponse.userId);"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"email\": \"ricardo.costa@gmail.com\",\n        \"password\": \"Ricardo123@\"\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/users/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"users",
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"description": "| **Name** | **Email** | **Password** | **Wallet Number** |\n| --- | --- | --- | --- |\n| Ricardo Mendes Costa | [ricardo.costa@gmail.com](https://mailto:ricardo.costa@gmail.com) | Ricardo123@ | 8780-6861-1987-9626 |\n| Luciana Ferreira Silva | [luciana.ferreira@outlook.com](https://mailto:luciana.ferreira@outlook.com) | LuciAna_2025! | 3546-0809-6401-5732 |\n| Carlos Alberto Oliveira | [carlos.alberto@yahoo.com](https://mailto:carlos.alberto@yahoo.com) | Alberto#Carlo8 | 6087-0323-3001-6361 |"
+		},
+		{
+			"name": "Wallets",
+			"item": [
+				{
+					"name": "Get Balance",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{accessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wallets/{{userId}}/balance",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wallets",
+								"{{userId}}",
+								"balance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Balance",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{accessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"value\": 2000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/wallets/{{userId}}/balance",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wallets",
+								"{{userId}}",
+								"balance"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transfers",
+			"item": [
+				{
+					"name": "Create Transfer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{accessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"value\": 240,\n    \"originWalletId\": \"b264bb40-8616-4b4b-88b8-cac0aeac9c97\",\n    \"destinationWalletId\": \"ddf30faf-47c9-493e-ad0b-8db8a4ab4788\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/transfer/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"transfer",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Transfers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{accessToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/transfers/{{userId}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"transfers",
+								"{{userId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

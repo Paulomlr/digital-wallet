@@ -1,0 +1,8 @@
+/home/cliente/Documents/JAVA_PROJECTS/carteira-digital/src/test/java/com/paulomlr/carteira_digital/CarteiraDigitalApplicationTests.java
+/home/cliente/Documents/JAVA_PROJECTS/carteira-digital/src/test/java/com/paulomlr/carteira_digital/application/usecaseimpl/AddBalanceUseCaseImplTest.java
+/home/cliente/Documents/JAVA_PROJECTS/carteira-digital/src/test/java/com/paulomlr/carteira_digital/application/usecaseimpl/CheckBalanceUseCaseImplTest.java
+/home/cliente/Documents/JAVA_PROJECTS/carteira-digital/src/test/java/com/paulomlr/carteira_digital/application/usecaseimpl/CreateTransferUseCaseImplTest.java
+/home/cliente/Documents/JAVA_PROJECTS/carteira-digital/src/test/java/com/paulomlr/carteira_digital/application/usecaseimpl/CreateUserUseCaseImplTest.java
+/home/cliente/Documents/JAVA_PROJECTS/carteira-digital/src/test/java/com/paulomlr/carteira_digital/application/usecaseimpl/ExecuteTransferUseCaseImplTest.java
+/home/cliente/Documents/JAVA_PROJECTS/carteira-digital/src/test/java/com/paulomlr/carteira_digital/core/domain/UserTest.java
+/home/cliente/Documents/JAVA_PROJECTS/carteira-digital/src/test/java/com/paulomlr/carteira_digital/core/domain/WalletTest.java

@@ -1,0 +1,2 @@
+ALTER TABLE tb_wallet
+ADD COLUMN wallet_code VARCHAR(16) UNIQUE;

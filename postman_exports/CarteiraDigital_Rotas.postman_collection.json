@@ -19,7 +19,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n        \"name\": \"Ricardo Mendes Costa\",\n        \"email\": \"ricardo.costa@gmail.com\",\n        \"password\": \"Ricardo123@\"\n    }",
+									"raw": "{\n    \"name\": \"Ricardo Mendes Costa\",\n    \"email\": \"ricardo.costa@gmail.com\",\n    \"password\": \"Ricardo123@\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -65,7 +65,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n        \"email\": \"ricardo.costa@gmail.com\",\n        \"password\": \"Ricardo123@\"\n    }",
+									"raw": "{\n    \"email\": \"ricardo.costa@gmail.com\",\n    \"password\": \"Ricardo123@\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -87,8 +87,7 @@
 						}
 					]
 				}
-			],
-			"description": "| **Name** | **Email** | **Password** | **Wallet Number** |\n| --- | --- | --- | --- |\n| Ricardo Mendes Costa | [ricardo.costa@gmail.com](https://mailto:ricardo.costa@gmail.com) | Ricardo123@ | 8780-6861-1987-9626 |\n| Luciana Ferreira Silva | [luciana.ferreira@outlook.com](https://mailto:luciana.ferreira@outlook.com) | LuciAna_2025! | 3546-0809-6401-5732 |\n| Carlos Alberto Oliveira | [carlos.alberto@yahoo.com](https://mailto:carlos.alberto@yahoo.com) | Alberto#Carlo8 | 6087-0323-3001-6361 |"
+			]
 		},
 		{
 			"name": "Wallets",

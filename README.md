@@ -179,22 +179,33 @@ docker-compose up -d --build
     }
 ]
 ```
+<h2>Dados de Usuários (Apenas para Testes)</h2>
+
+| Name                    | Email                           | Password         | Wallet Number         |
+|-------------------------|--------------------------------|------------------|-----------------------|
+| Ricardo Mendes Costa   | [ricardo.costa@gmail.com](mailto:ricardo.costa@gmail.com) | Ricardo123@      | 8780-6861-1987-9626  |
+| Luciana Ferreira Silva | [luciana.ferreira@outlook.com](mailto:luciana.ferreira@outlook.com) | LuciAna_2025!    | 3546-0809-6401-5732  |
+| Carlos Alberto Oliveira | [carlos.alberto@yahoo.com](mailto:carlos.alberto@yahoo.com) | Alberto#Carlo8   | 6087-0323-3001-6361  |
+
+
 
 <h2 id="estrutura">Estrutura de Arquivos</h2>
 
 ```bash
 📂 projeto
-├── 📂 adapters
-│   ├── 📂 dtos
-│   ├── 📂 mappers
-│   ├── 📂 repositories
-├── 📂 application
-│   ├── 📂 gateways
-│   ├── 📂 usecaseimpl
-├── 📂 core
-│   ├── 📂 domain
-│   ├── 📂 ports
-│   ├── 📂 usecase
-├── 📂 infra
-│   ├── 📂 config
-│   ├── 📂 controllers
+├──📂 adapters
+│   ├──  dtos
+│   ├──  mappers
+│   ├──  repositories
+├─ 📂 application
+│   ├──  gateways
+│   ├──  usecaseimpl
+├─ 📂 core
+│   ├──  domain
+│   ├──  ports
+│   ├──  usecase
+├──📂 infra
+│   ├──  config
+│   ├──  controllers
+    ├──  persistence
+    ├──  services

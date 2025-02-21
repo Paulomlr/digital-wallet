@@ -60,13 +60,21 @@ O objetivo é desenvolver um código modular, testável e fácil de manter, enqu
 
 ```bash
 git clone https://github.com/Paulomlr/digital-wallet.git
+
+cd digital-wallet
 ```
 
 <h4>Como iniciar o projeto:</h4>
 
 ```bash
 docker-compose up -d --build
-``````
+```
+<h4>Como para o projeto:</h4>
+
+```bash
+docker-compose down
+```
+
 <h4>Importar as variáveis de ambiente no postman:</h4>
 
 1. Abra o Postman
